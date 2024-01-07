@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js"></script>
+  <title>Sudoku</title>
+</head>
+<body onbeforeunload="guardarDatos()">
+  <header>
+    <div><h1 class="titulo">SUDOKU</h1></div>
+    <div class="menu">
+      <div class="texto_menu">MODO TECLADO</div>
+      <div>
+        <button class="boton_menu" id="btnModeC" 
+        onclick="toogleModeC()">CANDIDATOS</button>
+        <button class="boton_menu" id="btnModeN" 
+        onclick="toogleModeN()">NOTAS</button>
+      </div>
+      <div class="separador_menu"></div>
+      <div>
+        <button class="boton_menu" id="btnShowC" 
+        onclick="toogleShowC()">Mostrar candidatos</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="main_square" class="cuadro_principal">
+      <!-- Aqui escribe Javascript -->
+    </div>
+    <div class="menu">
+      <div>
+        <button class="boton_numero" onclick="setNumber(0)">-</button>
+        <button class="boton_numero" onclick="setNumber(1)">1</button>
+        <button class="boton_numero" onclick="setNumber(2)">2</button>
+        <button class="boton_numero" onclick="setNumber(3)">3</button>
+        <button class="boton_numero" onclick="setNumber(4)">4</button>
+        <button class="boton_numero" onclick="setNumber(5)">5</button>
+        <button class="boton_numero" onclick="setNumber(6)">6</button>
+        <button class="boton_numero" onclick="setNumber(7)">7</button>
+        <button class="boton_numero" onclick="setNumber(8)">8</button>
+        <button class="boton_numero" onclick="setNumber(9)">9</button>
+      </div>
+    </div>  
+    <div class="menu">
+      <div>
+        <button class="boton_menu" onclick="vaciarNumeros()">LIMPIAR</button>
+        <button class="boton_menu" onclick="vaciarCandidatos(true)">Quitar candidatos marcados</button>
+        <button class="boton_menu" onclick="vaciarNotas(true)">Quitar todas las notas</button>
+      </div>
+    </div>       
+  </main>
+</body>
+</html>
